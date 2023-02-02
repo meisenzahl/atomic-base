@@ -1,22 +1,14 @@
-include: xfce-desktop-pkgs.yaml
+include: pantheon-desktop-pkgs.yaml
 ref: fedora/36/${basearch}/vauxite
 rojig:
   name: fedora-vauxite
-  summary: "Fedora Vauxite (XFCE) base image"
+  summary: "Fedora Atomic base image"
   license: MIT
-packages:
-  - fedora-release-xfce
+packages: 
   # Generic release sub package for desktop variants
   - fedora-release-ostree-desktop
   # Portals for Flatpak
   - xdg-desktop-portal-gtk
-  # Essential packages from @xfce-apps
-  - atril
-  - firefox
-  - galculator
-  - mousepad
-  - ristretto
-  - xarchiver
 repos:
   - fedora-36
   - fedora-36-updates
