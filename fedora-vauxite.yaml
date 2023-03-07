@@ -1,0 +1,14 @@
+include: fedora-common-ostree.yaml
+ref: fedora/37/${basearch}/vauxite
+rojig:
+  name: fedora-vauxite
+  summary: "Fedora Atomic base image"
+  license: MIT
+packages:
+  # Generic release sub package for desktop variants
+  - fedora-release-ostree-desktop
+  # Portals for Flatpak
+  - xdg-desktop-portal-gtk
+repos:
+  - fedora-37
+  - fedora-37-updates
