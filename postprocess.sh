@@ -107,3 +107,12 @@ chmod 755 /usr/libexec/fedora-silverblue-readonly-sysroot
 
 # Enable the corresponding unit
 systemctl enable fedora-silverblue-readonly-sysroot.service
+
+# Install Pantheon
+dnf install -y git python3-pyyaml
+
+cd /tmp
+git clone https://github.com/meisenzahl/distro-agnostic
+cd distro-agnostic
+git checkout fedora-37
+./builder --install --distr fedora:37 --package elementary/desktop

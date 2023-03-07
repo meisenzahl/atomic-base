@@ -1,14 +1,14 @@
-include: pantheon-desktop-pkgs.yaml
-ref: fedora/36/${basearch}/vauxite
+include: fedora-common-ostree.yaml
+ref: fedora/37/${basearch}/vauxite
 rojig:
   name: fedora-vauxite
   summary: "Fedora Atomic base image"
   license: MIT
-packages: 
+packages:
   # Generic release sub package for desktop variants
   - fedora-release-ostree-desktop
   # Portals for Flatpak
   - xdg-desktop-portal-gtk
 repos:
-  - fedora-36
-  - fedora-36-updates
+  - fedora-37
+  - fedora-37-updates
